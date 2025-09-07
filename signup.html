@@ -27,23 +27,49 @@
     </div>
   </div>
 
+  <!-- Firebase JS SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script>
+
+  <!-- Firebase Config & Auth Logic -->
   <script>
+    // Firebase config — чиний өгсөн
+    const firebaseConfig = {
+      apiKey: "AIzaSyBvXcePc6mYouoxsyBBczs1d-0ibsbE_Iw",
+      authDomain: "jordan-site-62d47.firebaseapp.com",
+      projectId: "jordan-site-62d47",
+      storageBucket: "jordan-site-62d47.firebasestorage.app",
+      messagingSenderId: "638454726264",
+      appId: "1:638454726264:web:68aaa00ed68fa860ad778d",
+      measurementId: "G-B7F5C5GBSQ"
+    };
+
+    // Firebase-г инициализ хийх
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
     const form = document.getElementById('signupForm');
     const successMessage = document.getElementById('successMessage');
 
     form.addEventListener('submit', function(e) {
-      e.preventDefault(); // Хуудас ачаалуулахгүй
+      e.preventDefault();
 
-      // Animation харуулах
-      successMessage.classList.add('show');
+      const email = form.email.value;
+      const password = form.password.value;
 
-      // Хүсвэл: формыг цэвэрлэж болно
-      form.reset();
+      auth.createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // ✅ Бүртгэл амжилттай
+          successMessage.classList.add('show');
+          form.reset();
 
-      // 3 секундийн дараа алга болгоно
-      setTimeout(() => {
-        successMessage.classList.remove('show');
-      }, 3000);
+          setTimeout(() => {
+            successMessage.classList.remove('show');
+          }, 3000);
+        })
+        .catch((error) => {
+          alert("⚠️ Алдаа: " + error.message);
+        });
     });
   </script>
 </body>

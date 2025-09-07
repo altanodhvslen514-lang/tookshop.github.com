@@ -5,6 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Create Account</title>
   <link rel="stylesheet" href="styles.css"/>
+  <style>
+    body {
+      background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .signup-container {
+      background: #fff;
+      border-radius: 18px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 10px 32px rgba(80,0,130,0.10), 0 2px 4px rgba(0,0,0,0.02);
+      padding: 44px 36px 32px 36px;
+      margin: 40px 10px;
+      position: relative;
+      animation: fadeInPop 0.7s cubic-bezier(.18,.89,.32,1.28);
+    }
+    @keyframes fadeInPop {
+      from { opacity: 0; transform: scale(.92);}
+      to   { opacity: 1; transform: scale(1);}
+    }
+    .signup-container h2 {
+      text-align: center;
+      font-size: 2.1rem;
+      font-weight: bold;
+      color: #4a2174;
+      margin-bottom: 24px;
+      letter-spacing: 1px;
+    }
+    .signup-form label {
+      display: block;
+      margin-bottom: 7px;
+      color: #6f42c1;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .signup-form input {
+      width: 100%;
+      padding: 13px 14px;
+      margin-bottom: 22px;
+      border: 1.5px solid #dedede;
+      border-radius: 8px;
+      font-size: 16px;
+      background: #fafaff;
+      transition: border 0.2s;
+    }
+    .signup-form input:focus {
+      border-color: #a084e8;
+      outline: none;
+      background: #f4f0fb;
+    }
+    .signup-form button {
+      width: 100%;
+      padding: 13px 0;
+      background: linear-gradient(90deg, #8f5cf5 0%, #4a2174 100%);
+      color: #fff;
+      font-size: 1.08rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.22s, box-shadow 0.22s;
+      box-shadow: 0 2px 10px rgba(90,40,200,0.11);
+      letter-spacing: 1px;
+    }
+    .signup-form button:hover {
+      background: linear-gradient(90deg, #a084e8 0%, #4a2174 100%);
+      box-shadow: 0 6px 24px rgba(90,40,200,0.18);
+    }
+    .success-message {
+      display: none;
+      margin-top: 24px;
+      padding: 15px;
+      background: linear-gradient(90deg, #d4edda 70%, #fff 100%);
+      color: #155724;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 650;
+      font-size: 1.07rem;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 16px rgba(40,180,90,0.07);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+    .success-message.show {
+      display: block;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-10px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 600px) {
+      .signup-container {
+        padding: 30px 12px 22px 12px;
+      }
+      .signup-container h2 {
+        font-size: 1.35rem;
+        margin-bottom: 16px;
+      }
+      .success-message {
+        font-size: 1rem;
+        padding: 11px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="signup-container">
@@ -24,8 +131,7 @@
     document.getElementById('signupForm').addEventListener('submit', function(e) {
       e.preventDefault();
       document.getElementById('successMsg').classList.add('show');
-      // Формыг цэвэрлэхийг хүсвэл энэ мөрийг идэвхжүүлээрэй:
-      // document.getElementById('signupForm').reset();
+      // document.getElementById('signupForm').reset(); // Хүсвэл формыг цэвэрлэнэ
     });
   </script>
 </body>

@@ -9,7 +9,7 @@
 <body>
   <div class="signup-container">
     <h2>Create an Account</h2>
-    <form class="signup-form">
+    <form class="signup-form" id="signupForm">
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required>
 
@@ -21,6 +21,30 @@
 
       <button type="submit">Sign Up</button>
     </form>
+
+    <div id="successMessage" class="success-message">
+      🎉 Амжилттай бүртгэгдлээ!
+    </div>
   </div>
+
+  <script>
+    const form = document.getElementById('signupForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Хуудас ачаалуулахгүй
+
+      // Animation харуулах
+      successMessage.classList.add('show');
+
+      // Хүсвэл: формыг цэвэрлэж болно
+      form.reset();
+
+      // 3 секундийн дараа алга болгоно
+      setTimeout(() => {
+        successMessage.classList.remove('show');
+      }, 3000);
+    });
+  </script>
 </body>
 </html>

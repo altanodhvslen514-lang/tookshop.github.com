@@ -1,38 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jordan Store</title>
-  <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WarTeza - Discover Amazing Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">JORDAN</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Store</a></li>
-        <li><a href="#">Jordan</a></li>
-        <li><a href="#">Backpack</a></li>
-        <li><a href="signup.html">Sign Up</a></li>
-      </ul>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <p>Free delivery on orders over $50 • New arrivals every week</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1 class="logo-text">WarTeza</h1>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" placeholder="Search for brands, products..." class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="nav-actions">
+                <div class="nav-icon" title="Account">
+                    <i class="far fa-user"></i>
+                    <span>Account</span>
+                </div>
+                <div class="nav-icon" title="Saved">
+                    <i class="far fa-heart"></i>
+                    <span>Saved</span>
+                </div>
+                <div class="nav-icon cart-icon" title="Bag">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Bag</span>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Navigation -->
+        <div class="category-nav">
+            <div class="nav-container">
+                <ul class="category-menu">
+                    <li class="category-item">
+                        <a href="#" class="category-link">Women</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-content">
+                                <div class="mega-column">
+                                    <h4>Clothing</h4>
+                                    <ul>
+                                        <li><a href="#">Dresses</a></li>
+                                        <li><a href="#">Tops & T-Shirts</a></li>
+                                        <li><a href="#">Jackets & Coats</a></li>
+                                        <li><a href="#">Jeans</a></li>
+                                        <li><a href="#">Skirts</a></li>
+                                        <li><a href="#">Jumpsuits</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-column">
+                                    <h4>Shoes</h4>
+                                    <ul>
+                                        <li><a href="#">Boots</a></li>
+                                        <li><a href="#">Sneakers</a></li>
+                                        <li><a href="#">Heels</a></li>
+                                        <li><a href="#">Flats</a></li>
+                                        <li><a href="#">Sandals</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-column">
+                                    <h4>Accessories</h4>
+                                    <ul>
+                                        <li><a href="#">Bags</a></li>
+                                        <li><a href="#">Jewelry</a></li>
+                                        <li><a href="#">Watches</a></li>
+                                        <li><a href="#">Scarves</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-link">Men</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-content">
+                                <div class="mega-column">
+                                    <h4>Clothing</h4>
+                                    <ul>
+                                        <li><a href="#">T-Shirts & Polos</a></li>
+                                        <li><a href="#">Shirts</a></li>
+                                        <li><a href="#">Jackets & Coats</a></li>
+                                        <li><a href="#">Jeans</a></li>
+                                        <li><a href="#">Trousers</a></li>
+                                        <li><a href="#">Suits</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-column">
+                                    <h4>Shoes</h4>
+                                    <ul>
+                                        <li><a href="#">Sneakers</a></li>
+                                        <li><a href="#">Boots</a></li>
+                                        <li><a href="#">Dress Shoes</a></li>
+                                        <li><a href="#">Sandals</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-column">
+                                    <h4>Accessories</h4>
+                                    <ul>
+                                        <li><a href="#">Bags</a></li>
+                                        <li><a href="#">Watches</a></li>
+                                        <li><a href="#">Belts</a></li>
+                                        <li><a href="#">Wallets</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-link">Brands</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-content">
+                                <div class="mega-column">
+                                    <h4>Popular Brands</h4>
+                                    <ul>
+                                        <li><a href="#">Nike</a></li>
+                                        <li><a href="#">Adidas</a></li>
+                                        <li><a href="#">Zara</a></li>
+                                        <li><a href="#">H&M</a></li>
+                                        <li><a href="#">Uniqlo</a></li>
+                                        <li><a href="#">Levi's</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-link">Sale</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-link">New In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Explore the New Jordan Backpack</h1>
-      <p>Designed for performance and lifestyle.</p>
-      <a href="#" class="cta-button">Shop Now</a>
-    </div>
-    <div class="hero-img">
-      <img src="https://images.unsplash.com/photo-1619983081563-430f636045e2?auto=format&fit=crop&w=800&q=80" alt="Jordan Backpack" />
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <h1 class="hero-title">New Season, New Style</h1>
+                    <p class="hero-subtitle">Discover the latest trends in fashion</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary">Shop Women's New In</a>
+                        <a href="#" class="btn-secondary">Shop Men's New In</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=600&fit=crop" alt="Fashion Model" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Jordan Store. All rights reserved.</p>
-  </footer>
+    <!-- Quick Links -->
+    <section class="quick-links">
+        <div class="container">
+            <div class="quick-links-grid">
+                <a href="#" class="quick-link">
+                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=300&fit=crop" alt="Sale">
+                    <span class="quick-link-text">Sale - Up to 70% Off</span>
+                </a>
+                <a href="#" class="quick-link">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=300&fit=crop" alt="New In">
+                    <span class="quick-link-text">New In</span>
+                </a>
+                <a href="#" class="quick-link">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop" alt="Sneakers">
+                    <span class="quick-link-text">Sneakers</span>
+                </a>
+                <a href="#" class="quick-link">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=300&fit=crop" alt="Accessories">
+                    <span class="quick-link-text">Accessories</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Shop the Look</h2>
+                <div class="view-all">
+                    <a href="#" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=500&fit=crop" alt="Denim Jacket" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-badge">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-brand">Zara</h3>
+                        <p class="product-name">Oversized Denim Jacket</p>
+                        <div class="product-price">
+                            <span class="current-price">$89.99</span>
+                            <span class="original-price">$129.99</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot blue"></span>
+                            <span class="color-dot black"></span>
+                            <span class="color-dot white"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=500&fit=crop" alt="Sneakers" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-brand">Nike</h3>
+                        <p class="product-name">Air Max 270 Running Shoes</p>
+                        <div class="product-price">
+                            <span class="current-price">$150.00</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot white"></span>
+                            <span class="color-dot black"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop" alt="Dress" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-badge sale">Sale</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-brand">H&M</h3>
+                        <p class="product-name">Midi Wrap Dress</p>
+                        <div class="product-price">
+                            <span class="current-price">$24.99</span>
+                            <span class="original-price">$39.99</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot red"></span>
+                            <span class="color-dot black"></span>
+                            <span class="color-dot navy"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Sweater" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-brand">Uniqlo</h3>
+                        <p class="product-name">Cashmere Blend Sweater</p>
+                        <div class="product-price">
+                            <span class="current-price">$79.99</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot beige"></span>
+                            <span class="color-dot gray"></span>
+                            <span class="color-dot navy"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop" alt="Jeans" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-brand">Levi's</h3>
+                        <p class="product-name">501 Original Fit Jeans</p>
+                        <div class="product-price">
+                            <span class="current-price">$98.00</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot blue"></span>
+                            <span class="color-dot dark-blue"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=500&fit=crop" alt="Bag" class="product-image">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-brand">Coach</h3>
+                        <p class="product-name">Leather Crossbody Bag</p>
+                        <div class="product-price">
+                            <span class="current-price">$195.00</span>
+                        </div>
+                        <div class="product-colors">
+                            <span class="color-dot brown"></span>
+                            <span class="color-dot black"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Categories -->
+    <section class="trending-categories">
+        <div class="container">
+            <h2 class="section-title">Trending Now</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=600&h=400&fit=crop" alt="Streetwear">
+                    <div class="category-overlay">
+                        <h3>Streetwear</h3>
+                        <p>Urban fashion essentials</p>
+                        <a href="#" class="btn-category">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&h=400&fit=crop" alt="Minimalist">
+                    <div class="category-overlay">
+                        <h3>Minimalist</h3>
+                        <p>Clean, simple styles</p>
+                        <a href="#" class="btn-category">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop" alt="Vintage">
+                    <div class="category-overlay">
+                        <h3>Vintage</h3>
+                        <p>Retro-inspired pieces</p>
+                        <a href="#" class="btn-category">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay in Style</h2>
+                <p>Get the latest fashion trends, exclusive offers, and style tips delivered to your inbox.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" class="email-input">
+                    <button class="btn-newsletter">Subscribe</button>
+                </div>
+                <p class="newsletter-disclaimer">By subscribing, you agree to receive marketing emails from WarTeza.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Delivery & Returns</a></li>
+                        <li><a href="#">Track Your Order</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About WarTeza</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="app-download">
+                        <p>Download our app</p>
+                        <div class="app-links">
+                            <a href="#" class="app-link">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                            </a>
+                            <a href="#" class="app-link">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 WarTeza. All Rights Reserved</p>
+                    <div class="payment-methods">
+                        <span>We accept:</span>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-apple-pay"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
